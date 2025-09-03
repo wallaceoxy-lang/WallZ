@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada da Boleira Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            color: #000000;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Seção Hero */
+        .hero {
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://marrarabortoloti.com/wp-content/uploads/2022/12/rm380-12-scaled-1.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            align-items: center;
+        }
+        
+        .hero-text {
+            flex: 0 0 58.85%;
+            padding-right: 20px;
+        }
+        
+        .hero-image {
+            flex: 0 0 40.88%;
+            text-align: center;
+        }
+        
+        .hero-title {
+            color: #02b2e1;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .hero-subtitle {
+            color: #000000;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-description {
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .hero-description span {
+            color: #02b2e1;
+        }
+        
+        .hero-tag {
+            color: #02b2e1;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .form-container {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #00A013;
+            color: white;
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background-color: #037210;
+        }
+        
+        .privacy-text {
+            font-size: 14px;
+            color: #363636;
+            line-height: 13px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .hero-final-text {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 30px;
+            margin-top: 25px;
+            text-align: center;
+        }
+        
+        .hero-final-text span {
+            color: #02b2e1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 40px 4px #A4A3A4;
+        }
+        
+        /* Seção Para Quem */
+        .para-quem {
+            background-color: #02B2E1;
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #ffffff;
+            font-size: 27px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        
+        .benefits {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .benefit {
+            flex: 0 0 30%;
+            text-align: center;
+        }
+        
+        .benefit img {
+            width: 40%;
+            margin-bottom: 15px;
+        }
+        
+        .benefit p {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        .cta-text {
+            text-align: center;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        /* Seção Cronograma */
+        .cronograma {
+            background-color: #000000;
+            background-image: url('https://marrarabortoloti.com/wp-content/uploads/2022/12/rm380-12-scaled-1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+        }
+        
+        .cronograma-title {
+            text-align: center;
+            color: #02B2E1;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .cronograma-item {
+            margin-bottom: 40px;
+            padding-left: 30px;
+            border-left: 5px solid #A60588;
+        }
+        
+        .cronograma-item-title {
+            color: #02B2E1;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .cronograma-item-title i {
+            margin-right: 10px;
+            font-size: 25px;
+        }
+        
+        .cronograma-item-description {
+            color: #02B2E1;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 30px;
+            margin-left: 35px;
+        }
+        
+        .cronograma-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Seção Sobre */
+        .sobre {
+            background-color: #02B2E1;
+            padding: 50px 0;
+        }
+        
+        .sobre-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .sobre-image {
+            flex: 0 0 38.75%;
+            text-align: center;
+        }
+        
+        .sobre-image img {
+            width: 82%;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px #000000;
+        }
+        
+        .sobre-text {
+            flex: 0 0 61.25%;
+            padding-left: 30px;
+        }
+        
+        .sobre-text p {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* Botão do WhatsApp */
+        .whatsapp-section {
+            background-color: #02B2E1;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .whatsapp-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .whatsapp-title {
+            color: #02b2e1;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .whatsapp-description {
+            color: #000;
+            font-size: 18px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .whatsapp-description span {
+            color: #02b2e1;
+            font-weight: 600;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            font-weight: 700;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-btn i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 991px) {
+            .hero-content {
+                flex-direction: column;
+                padding: 40px 0;
+            }
+            
+            .hero-text, .hero-image {
+                flex: 0 0 100%;
+                padding: 0;
+            }
+            
+            .hero-image {
+                margin-top: 40px;
+            }
+            
+            .benefits {
+                flex-direction: column;
+            }
+            
+            .benefit {
+                margin-bottom: 30px;
+            }
+            
+            .sobre-content {
+                flex-direction: column;
+            }
+            
+            .sobre-image, .sobre-text {
+                flex: 0 0 100%;
+                padding: 0;
+            }
+            
+            .sobre-text {
+                margin-top: 30px;
+            }
+            
+            .whatsapp-container {
+                padding: 15px;
+            }
+            
+            .whatsapp-title {
+                font-size: 20px;
+            }
+            
+            .whatsapp-description {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero-title {
+                font-size: 15px;
+            }
+            
+            .hero-subtitle {
+                font-size: 15px;
+            }
+            
+            .hero-description {
+                font-size: 16px;
+            }
+            
+            .hero-tag {
+                font-size: 14px;
+            }
+            
+            .btn {
+                font-size: 14px;
+            }
+            
+            .privacy-text {
+                font-size: 10px;
+            }
+            
+            .hero-final-text {
+                font-size: 12px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            .section-subtitle {
+                font-size: 14px;
+            }
+            
+            .cta-text {
+                font-size: 18px;
+            }
+            
+            .cronograma-title {
+                font-size: 18px;
+            }
+            
+            .cronograma-item-title {
+                font-size: 15px;
+            }
+            
+            .cronograma-item-description {
+                font-size: 12px;
+            }
+            
+            .whatsapp-title {
+                font-size: 18px;
+            }
+            
+            .whatsapp-description {
+                font-size: 14px;
+            }
+            
+            .whatsapp-btn {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">JORNADA DA BOLEIRA PROFISSIONAL</h1>
+                    <p class="hero-subtitle">com Marrara Bortoloti</p>
+                    
+                    <p class="hero-description">
+                        Aprenda no <span>passo a passo</span>, como fazer <span>bolos decorados</span> que vendem todo santo dia, desde a massa <span>até a decoração com bicos</span> e transforme a confeitaria <span>na sua profissão!</span>
+                    </p>
+                    
+                    <p class="hero-tag">ONLINE, GRATUITO E SEM ENROLAÇÃO</p>
+                    
+                    <div class="form-container">
+                        <a href="https://chat.whatsapp.com/Ccg53C63tlLFpkn9sREtZd" class="btn" target="_blank">
+                            ENTRAR NO GRUPO DO WHATSAPP AGORA!
+                        </a>
+                    </div>
+                    
+                    <p class="privacy-text">
+                        De acordo com a lei 12.965/2014 e 13.709/2018, autorizo Marrara Bortoloti a enviar comunicações por e-mail ou qualquer outro meio e concordo com a sua política de privacidade.
+                    </p>
+                    
+                    <p class="hero-final-text">
+                        Faça das comemorações um <span>negócio na confeitaria,</span> produzindo e vendendo bolos decorados, <span>trabalhando na cozinha de sua casa,</span> perto da família e <span>viva financeiramente da confeitaria!</span>
+                    </p>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="https://marrarabortoloti.com/wp-content/uploads/2022/12/pagina-de-captura.jpg" alt="Jornada da Boleira Profissional">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção WhatsApp -->
+    <section class="whatsapp-section">
+        <div class="container">
+            <div class="whatsapp-container">
+                <h2 class="whatsapp-title">🎉 FAÇA PARTE DO NOSSO GRUPO EXCLUSIVO 🎉</h2>
+                <p class="whatsapp-description">
+                    Você está a um passo de transformar sua vida através da confeitaria! 
+                    <span>Junte-se a centenas de outras boleiras</span> no nosso grupo exclusivo do WhatsApp 
+                    e receba <span>dicas diárias, suporte personalizado</span> e faça parte de uma comunidade 
+                    que está crescendo junto na jornada para se tornar uma boleira profissional de sucesso!
+                </p>
+                <a href="https://chat.whatsapp.com/Ccg53C63tlLFpkn9sREtZd" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> ENTRAR NO GRUPO DO WHATSAPP
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Para Quem Section -->
+    <section class="para-quem">
+        <div class="container">
+            <h2 class="section-title">Para quem é a Jornada da boleira profissional?</h2>
+            <p class="section-subtitle">Este treinamento é só para você que:</p>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <img src="https://marrarabortoloti.com/wp-content/uploads/2022/12/chefe-de-cozinha.png" alt="Nunca fez um bolo">
+                    <p>Nunca fez um bolo na vida mas tem vontade de empreender nessa área para trabalhar perto da família e ter liberdade financeira.</p>
+                </div>
+                
+                <div class="benefit">
+                    <img src="https://marrarabortoloti.com/wp-content/uploads/2022/12/rota.png" alt="Iniciando na confeitaria">
+                    <p>Está iniciando na confeitaria e ainda se sente meio perdida, não sabe o que é preciso para começar do jeito correto.</p>
+                </div>
+                
+                <div class="benefit">
+                    <img src="https://marrarabortoloti.com/wp-content/uploads/2022/12/renda.png" alt="Já é confeiteira">
+                    <p>Já é confeiteira mas sente que está longe de alcançar seus objetivos e realmente viver da confeitaria como principal fonte de renda.</p>
+                </div>
+            </div>
+            
+            <p class="cta-text">CLIQUE NO BOTÃO E GARANTA SUA VAGA AGORA MESMO!</p>
+            
+            <div style="text-align: center;">
+                <a href="https://chat.whatsapp.com/Ccg53C63tlLFpkn9sREtZd" class="btn" target="_blank">QUERO PARTICIPAR DO GRUPO</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cronograma Section -->
+    <section class="cronograma">
+        <div class="container">
+            <h2 class="cronograma-title">CRONOGRAMA DA JORNADA</h2>
+            
+            <div class="cronograma-item">
+                <h3 class="cronograma-item-title">
+                    <i class="far fa-check-circle"></i> A base para se tornar uma boleira profissional!
+                </h3>
+                <p class="cronograma-item-description">
+                    Descubra tudo o que é necessário para iniciar a produção de bolos decorados. Veja na prática como fazer uma massa base e um recheio base estruturados, que vão sustentar o seu negócio na confeitaria.
+                </p>
+            </div>
+            
+            <div class="cronograma-item">
+                <h3 class="cronograma-item-title">
+                    <i class="far fa-check-circle"></i> Estruturando o bolo e a sua confiança
+                </h3>
+                <p class="cronograma-item-description">
+                    Aprenda a fazer a prensagem da forma correta e como chegar no ponto ideal do chantilly e chantininho, para que você se sinta segura e confiante de que este bolo ficará inteiro até o momento do corte! Veja também quais são os movimentos com bicos mais simples de serem executados, mas que vão te trazer infinitas possibilidades de decorações.
+                </p>
+            </div>
+            
+            <div class="cronograma-item">
+                <h3 class="cronograma-item-title">
+                    <i class="far fa-check-circle"></i> 2 técnicas que toda boleira profissional precisa saber
+                </h3>
+                <p class="cronograma-item-description">
+                    Veja no passo a passo, como confeitar um bolo com chantilly e chantininho, com uma decoração irresistível, porem simples! E veja as principais técnicas de marketing para conseguir vender esse tipo de bolo todos os dias para construir uma renda constante!
+                </p>
+            </div>
+            
+            <div class="cronograma-item">
+                <h3 class="cronograma-item-title">
+                    <i class="far fa-check-circle"></i> Como sair do amadorismo e se tornar uma boleira profissional?
+                </h3>
+                <p class="cronograma-item-description">
+                    Descubra como sair do zero e se tornar uma boleira profissional em poucos meses!
+                </p>
+            </div>
+            
+            <div class="cronograma-cta">
+                <a href="https://chat.whatsapp.com/Ccg53C63tlLFpkn9sREtZd" class="btn" target="_blank">QUERO FAZER PARTE DO GRUPO</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sobre Section -->
+    <section class="sobre">
+        <div class="container">
+            <h2 class="section-title">QUEM É MARRARA BORTOLOTI?</h2>
+            
+            <div class="sobre-content">
+                <div class="sobre-image">
+                    <img src="https://marrarabortoloti.com/wp-content/uploads/2022/12/IMG-20220414-WA0048.jpg" alt="Marrara Bortoloti">
+                </div>
+                
+                <div class="sobre-text">
+                    <p>Marrara Bortoloti transformou a própria realidade através da confeitaria iniciando com pouco investimento e poucos recursos, virou uma empreendedora de sucesso e uma verdadeira especialista no ramo da confeitaria.</p>
+                    
+                    <p>Criadora de vários cursos online e apostilas de confeitaria que já transformaram a vida de muitas pessoas. Foi professora de mais de 200 mil alunas somando todos os seus cursos e apostilas.</p>
+                    
+                    <p>E agora, vai encurtar seu caminho rumo ao sucesso na confeitaria te passando toda a experiência vivida na confeitaria, com aulas completas, detalhadas e uma didática incrível!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
